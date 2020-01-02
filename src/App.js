@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import HeaderComponent from './components/headerComponent';
+import MainComponent from './components/mainComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <HeaderComponent />
+        <div className="container">
+          <React.Suspense fallback={(
+            <div className="spinner-border" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+)}
+          >
+            <MainComponent />
+          </React.Suspense>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
