@@ -7,6 +7,9 @@ const LaunchRow = (props) => {
   const {
     id, name, status = {}, rocket = {},
   } = props;
+
+  const { configuration = {} } = rocket;
+
   return (
     <tr>
       <td>
@@ -15,12 +18,12 @@ const LaunchRow = (props) => {
         </NavLink>
       </td>
       <td>
-        <NavLink to={`/launch/${id}`}>
+        <NavLink id="name" to={`/launch/${id}`}>
           {name}
         </NavLink>
       </td>
-      <td>{status.name}</td>
-      <td>{rocket.configuration.name}</td>
+      <td id="status-name">{status.name}</td>
+      <td id="rocket-name">{configuration.name}</td>
     </tr>
   );
 };

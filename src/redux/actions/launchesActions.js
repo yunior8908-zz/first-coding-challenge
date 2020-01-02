@@ -1,16 +1,16 @@
 import { put, call, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
-export async function fetchLaunchesApi(params) {
+export function fetchLaunchesApi(params) {
   const { page = 1, limit = 5, search } = params;
-  const query = `limit=${limit}&offset=${limit * page}${search ? `${'&search='}${search}` : ''}`;
-  const response = await axios.get(`https://spacelaunchnow.me/api/3.3.0/launch/upcoming/?${query}`);
-  return response;
+  const query = `limit=${limit}&offset=${limit * page}${search
+    ? `${'&search='}${search}`
+    : ''}`;
+  return axios.get(`https://spacelaunchnow.me/api/3.3.0/launch/upcoming/?${query}`);
 }
 
-export async function fetchLaunchApi(id) {
-  const response = await axios.get(`https://spacelaunchnow.me/api/3.3.0/launch/${id}`);
-  return response;
+export function fetchLaunchApi(id) {
+  return axios.get(`https://spacelaunchnow.me/api/3.3.0/launch/${id}`);
 }
 
 function fetchLaunchesRequestSuccess(launches) {
@@ -32,7 +32,7 @@ export function* requestLaunchesFromApi(params) {
     const data = yield call(fetchLaunchesApi, params.params);
     yield put(fetchLaunchesRequestSuccess(data.data));
   } catch (error) {
-    console.error(error);
+    throw new Error(error.message);
   }
 }
 
@@ -41,7 +41,7 @@ export function* requestLaunchFromApi(param) {
     const data = yield call(fetchLaunchApi, param.id);
     yield put(fetchLaunchSuccess(data.data));
   } catch (error) {
-    console.error(error);
+    throw new Error(error.message);
   }
 }
 

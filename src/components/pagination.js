@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +9,8 @@ const Pagination = (props) => {
   const [start, setStart] = useState(current - 1 || 0);
 
   useEffect(() => {
-    const aux = Array(total).fill(null, start, start + 10).map((pg, index) => index + 1);
+    const aux = Array(total).fill(null, start,
+      start + 10).map((pg, index) => index + 1);
     setRange(aux);
   }, [start, total]);
 
@@ -28,25 +28,28 @@ const Pagination = (props) => {
 
   return (
     <div className="pagination">
-      <div
+      <span
         className={`page-item ${start === 0 ? 'disabled' : ''}`}
-        disabled={start === 0}
         onClick={() => handlerSlide('down')}
       >
         <span className="page-link small">Previous</span>
-      </div>
+      </span>
       {range.map((pg) => (
-        <div key={pg} className={`page-item ${pg === current ? 'active' : ''}`} onClick={() => handlerPage(pg)}>
-          <span className="page-link small" href="#">{pg}</span>
-        </div>
+        <span
+          key={pg}
+          className={`page-item ${pg === current ? 'active' : ''}`}
+          onClick={() => handlerPage(pg)}
+        >
+          <span className="page-link small">{pg}</span>
+        </span>
       ))}
-      <div
+      <span
         className="page-item"
-        disabled={start === (total - 10) || total - start < 10}
+       // disabled={start === (total - 10) || total - start < 10}
         onClick={() => handlerSlide('up')}
       >
-        <span className="page-link small" href="#">Next</span>
-      </div>
+        <span className="page-link small">Next</span>
+      </span>
     </div>
   );
 };

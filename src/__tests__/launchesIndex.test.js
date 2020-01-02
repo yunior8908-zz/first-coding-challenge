@@ -1,14 +1,13 @@
 /* eslint-disable no-undef,no-unused-vars */
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import axios from 'axios';
-import toJson from 'enzyme-to-json';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { fetchLaunchesApi } from '../redux/actions/launchesActions';
 import LaunchesIndex from '../components/launches/launchesIndex';
 import { configureStore } from '../redux/store';
-import { datosTest } from '../../utils';
+import { datosTest } from '../utils';
 
 jest.mock('axios');
 
@@ -32,11 +31,13 @@ describe('[LaunchesIndex.js]', async () => {
   });
 
   it('should be called api', async () => {
-    const wrapper = mount(<BrowserRouter>
-      <Provider store={configureStore()}>
-        <LaunchesIndex />
-      </Provider>
-    </BrowserRouter>);
+    const wrapper = mount(
+      <BrowserRouter>
+        <Provider store={configureStore()}>
+          <LaunchesIndex />
+        </Provider>
+      </BrowserRouter>,
+    );
     expect(axios.get).toHaveBeenCalledWith('https://spacelaunchnow.me/api/3.3.0/launch/upcoming/?limit=5&offset=5');
   });
 });

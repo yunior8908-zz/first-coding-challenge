@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import { BrowserRouter } from 'react-router-dom';
 import LaunchesList from '../components/launches/launchesList';
-import { datosTest } from '../../utils';
-import LaunchRow from "../components/launches/launchRow";
+import { datosTest } from '../utils';
+import LaunchRow from '../components/launches/launchRow';
 
 const mockStore = configureMockStore([]);
 const datos = datosTest;
@@ -25,11 +25,13 @@ describe('[LaunchesList.js]', () => {
       },
     });
 
-    wrapper = mount(<BrowserRouter>
-      <Provider store={store}>
-        <LaunchesList />
-      </Provider>
-    </BrowserRouter>);
+    wrapper = mount(
+      <BrowserRouter>
+        <Provider store={store}>
+          <LaunchesList />
+        </Provider>
+      </BrowserRouter>,
+    );
   });
 
   it('should LaunchesList render without problem', () => {
@@ -41,5 +43,5 @@ describe('[LaunchesList.js]', () => {
   it('shoud LaunchRow render 1 element', () => {
     const launchRow = wrapper.find(LaunchRow);
     expect(launchRow).toHaveLength(1);
-  })
+  });
 });

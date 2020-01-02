@@ -14,7 +14,10 @@ export default (state = initialState, action) => {
       };
     case 'FETCH_LIST_SUCCESS':
       return {
-        ...state, launches: action.launches.results, total: action.launches.count, loadingList: false,
+        ...state,
+        launches: action.launches.results,
+        total: action.launches.count,
+        loadingList: false,
       };
     case 'FETCH_LAUNCH':
       return {

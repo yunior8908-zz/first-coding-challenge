@@ -3,7 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 
 const HeaderComponent = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ marginBottom: '15px' }}>
+  <nav
+    className="navbar navbar-expand-lg navbar-dark bg-dark"
+    style={{ marginBottom: '15px' }}
+  >
     <NavLink className="navbar-brand" to="/launches">Launches</NavLink>
     <button
       className="navbar-toggler"

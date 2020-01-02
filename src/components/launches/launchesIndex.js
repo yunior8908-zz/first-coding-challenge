@@ -10,7 +10,7 @@ import SearchInput from './searchInput';
 const LaunchesIndex = (props) => {
   const { listar, loading, total } = props;
   const [page, setPage] = React.useState(1);
-  const [limit, setLimit] = React.useState(5);
+  const [limit] = React.useState(5);
   const [search, setSearch] = React.useState('');
 
   React.useEffect(() => {
@@ -34,7 +34,14 @@ const LaunchesIndex = (props) => {
       )}
       <SearchInput searchName={handleSearch} />
       {!loading && <LaunchesList />}
-      {total > 0 && !loading && <Pagination total={total} current={page} pageSize={limit} handlePage={handlePage} />}
+      {total > 0 && !loading && (
+      <Pagination
+        total={total}
+        current={page}
+        pageSize={limit}
+        handlePage={handlePage}
+      />
+      )}
     </>
   );
 };

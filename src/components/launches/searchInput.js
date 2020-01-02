@@ -14,8 +14,19 @@ const SearchInput = (props) => {
 
   return (
     <div className="input-group input-group-sm mb-3">
-      <input className="form-control" placeholder="search by name" value={search} onChange={handlerChange} />
-      <button type="button" className="btn btn-primary btn-sm" onClick={handleSearch}>Search</button>
+      <input
+        className="form-control"
+        placeholder="search by name"
+        value={search}
+        onChange={handlerChange}
+      />
+      <button
+        type="button"
+        className="btn btn-primary btn-sm"
+        onClick={handleSearch}
+      >
+Search
+      </button>
     </div>
   );
 };

@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[launchDetails.js] should have name=LauncherOne | Test Flight 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Connect(withRouter(LaunchDetails))
+        match={
+          Object {
+            "params": Object {
+              "id": "4a47e6e2-5545-4bac-ad84-21c8e73940b2",
+            },
+          }
+        }
+      >
+        <withRouter(LaunchDetails)
+          launch={
+            Object {
+              "failreason": null,
+              "hashtag": null,
+              "holdreason": null,
+              "id": "4a47e6e2-5545-4bac-ad84-21c8e73940b2",
+              "image_url": null,
+              "img_url": null,
+              "infographic_url": null,
+              "inhold": false,
+              "launch_library_id": 1603,
+              "mission": Object {
+                "description": "Payload-free test flight of the LauncherOne vehicle.",
+                "id": 679,
+                "launch_library_id": 851,
+                "name": "Test Flight",
+                "orbit": "Low Earth Orbit",
+                "orbit_abbrev": "LEO",
+                "type": "Test Flight",
+              },
+              "name": "LauncherOne | Test Flight",
+              "net": "2020-01-15T00:00:00Z",
+              "pad": Object {
+                "agency_id": null,
+                "id": 53,
+                "info_url": null,
+                "latitude": "35.059444",
+                "location": Object {
+                  "country_code": "UNK",
+                  "id": 20,
+                  "name": "Air launch to orbit",
+                },
+                "longitude": "-118.151667",
+                "map_url": "https://www.google.com/maps/place/35°03'34.0\\"N+118°09'06.0\\"W/",
+                "name": "Mojave Air and Space Port",
+                "wiki_url": "https://en.wikipedia.org/wiki/Mojave_Air_and_Space_Port",
+              },
+              "probability": -1,
+              "rocket": Object {
+                "configuration": Object {
+                  "id": 141,
+                  "launch_library_id": 173,
+                  "launch_service_provider": "Virgin Orbit",
+                  "name": "LauncherOne",
+                  "url": "https://spacelaunchnow.me/api/3.3.0/config/launcher/141/",
+                },
+                "id": 8,
+                "launcher_stage": Array [],
+                "spacecraft_stage": null,
+              },
+              "slug": "https://spacelaunchnow.me/launch/launcherone-test-flight",
+              "status": Object {
+                "id": 2,
+                "name": "TBD",
+              },
+              "tbddate": true,
+              "tbdtime": true,
+              "url": "https://spacelaunchnow.me/api/3.3.0/launch/4a47e6e2-5545-4bac-ad84-21c8e73940b2/",
+              "window_end": "2020-01-15T00:00:00Z",
+              "window_start": "2020-01-15T00:00:00Z",
+            }
+          }
+          loading={false}
+          match={
+            Object {
+              "params": Object {
+                "id": "4a47e6e2-5545-4bac-ad84-21c8e73940b2",
+              },
+            }
+          }
+          select={[Function]}
+        >
+          <LaunchDetails
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            launch={
+              Object {
+                "failreason": null,
+                "hashtag": null,
+                "holdreason": null,
+                "id": "4a47e6e2-5545-4bac-ad84-21c8e73940b2",
+                "image_url": null,
+                "img_url": null,
+                "infographic_url": null,
+                "inhold": false,
+                "launch_library_id": 1603,
+                "mission": Object {
+                  "description": "Payload-free test flight of the LauncherOne vehicle.",
+                  "id": 679,
+                  "launch_library_id": 851,
+                  "name": "Test Flight",
+                  "orbit": "Low Earth Orbit",
+                  "orbit_abbrev": "LEO",
+                  "type": "Test Flight",
+                },
+                "name": "LauncherOne | Test Flight",
+                "net": "2020-01-15T00:00:00Z",
+                "pad": Object {
+                  "agency_id": null,
+                  "id": 53,
+                  "info_url": null,
+                  "latitude": "35.059444",
+                  "location": Object {
+                    "country_code": "UNK",
+                    "id": 20,
+                    "name": "Air launch to orbit",
+                  },
+                  "longitude": "-118.151667",
+                  "map_url": "https://www.google.com/maps/place/35°03'34.0\\"N+118°09'06.0\\"W/",
+                  "name": "Mojave Air and Space Port",
+                  "wiki_url": "https://en.wikipedia.org/wiki/Mojave_Air_and_Space_Port",
+                },
+                "probability": -1,
+                "rocket": Object {
+                  "configuration": Object {
+                    "id": 141,
+                    "launch_library_id": 173,
+                    "launch_service_provider": "Virgin Orbit",
+                    "name": "LauncherOne",
+                    "url": "https://spacelaunchnow.me/api/3.3.0/config/launcher/141/",
+                  },
+                  "id": 8,
+                  "launcher_stage": Array [],
+                  "spacecraft_stage": null,
+                },
+                "slug": "https://spacelaunchnow.me/launch/launcherone-test-flight",
+                "status": Object {
+                  "id": 2,
+                  "name": "TBD",
+                },
+                "tbddate": true,
+                "tbdtime": true,
+                "url": "https://spacelaunchnow.me/api/3.3.0/launch/4a47e6e2-5545-4bac-ad84-21c8e73940b2/",
+                "window_end": "2020-01-15T00:00:00Z",
+                "window_start": "2020-01-15T00:00:00Z",
+              }
+            }
+            loading={false}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            select={[Function]}
+          >
+            <div
+              className="card"
+            >
+              <div
+                className="card-header"
+              >
+                <strong>
+                  id:
+                  4a47e6e2-5545-4bac-ad84-21c8e73940b2
+                </strong>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div>
+                  <strong>
+                    url: 
+                  </strong>
+                   
+                  https://spacelaunchnow.me/api/3.3.0/launch/4a47e6e2-5545-4bac-ad84-21c8e73940b2/
+                </div>
+                <div>
+                  <strong>
+                    slug: 
+                  </strong>
+                  https://spacelaunchnow.me/launch/launcherone-test-flight
+                </div>
+                <div
+                  id="name"
+                >
+                  <strong>
+                    name: 
+                  </strong>
+                  <span>
+                    LauncherOne | Test Flight
+                  </span>
+                </div>
+                <div>
+                  <strong>
+                    status: 
+                  </strong>
+                  TBD
+                </div>
+                <div>
+                  <strong>
+                    net: 
+                  </strong>
+                  2020-01-15T00:00:00Z
+                </div>
+                <div>
+                  <strong>
+                    window start: 
+                  </strong>
+                  2020-01-15T00:00:00Z
+                </div>
+                <div>
+                  <strong>
+                    window end: 
+                  </strong>
+                  2020-01-15T00:00:00Z
+                </div>
+                <div>
+                  <strong>
+                    rocket: 
+                  </strong>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <div
+                  className="float-right"
+                >
+                  <NavLink
+                    className="btn btn-sm btn-primary"
+                    id="button-back"
+                    to="/launches"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="btn btn-sm btn-primary"
+                      id="button-back"
+                      to={
+                        Object {
+                          "hash": "",
+                          "pathname": "/launches",
+                          "search": "",
+                          "state": null,
+                        }
+                      }
+                    >
+                      <LinkAnchor
+                        aria-current={null}
+                        className="btn btn-sm btn-primary"
+                        href="/launches"
+                        id="button-back"
+                        navigate={[Function]}
+                      >
+                        <a
+                          aria-current={null}
+                          className="btn btn-sm btn-primary"
+                          href="/launches"
+                          id="button-back"
+                          onClick={[Function]}
+                        >
+                          back
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </LaunchDetails>
+        </withRouter(LaunchDetails)>
+      </Connect(withRouter(LaunchDetails))>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;

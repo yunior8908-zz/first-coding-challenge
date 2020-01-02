@@ -4,13 +4,15 @@ import { connect } from 'react-redux';
 import { withRouter, NavLink } from 'react-router-dom';
 import { FetchLaunch } from '../../redux/actions/launchesActions';
 
-export const LaunchDetails = (props) => {
+const LaunchDetails = (props) => {
   const {
     launch, select, loading, match,
   } = props;
 
   const {
-    url, slug, name, status = {}, window_start: windowStart, window_end: windowEnd, net, rocket = {},
+    url, slug,
+    name, status = {},
+    window_start: windowStart, window_end: windowEnd, net, rocket = {},
   } = launch;
   const { configuration = {} } = rocket;
   const { id } = match.params;
@@ -47,9 +49,9 @@ id:
                 <strong>slug: </strong>
                 {slug}
               </div>
-              <div>
+              <div id="name">
                 <strong>name: </strong>
-                {name}
+                <span>{name}</span>
               </div>
               <div>
                 <strong>status: </strong>
@@ -75,7 +77,13 @@ id:
           )}
           <div className="card-footer">
             <div className="float-right">
-              <NavLink className="btn btn-sm btn-primary" to="/launches">back</NavLink>
+              <NavLink
+                id="button-back"
+                className="btn btn-sm btn-primary"
+                to="/launches"
+              >
+                <span>back</span>
+              </NavLink>
             </div>
           </div>
         </div>
